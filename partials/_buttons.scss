@@ -1,6 +1,24 @@
 @each $color in $button-colors {
-    .button-#{nth($color, 1)} {
-      background-color: $color;
-      @include floating;
+  .button-#{str-slice($color + "", 2)} {
+    background-color: $color;
+  }
+}
+
+$button-types: ("discover", "login", "contact");
+
+
+@each $color, $type in zip($button-colors, $button-types) {
+  .button-#{$type} {
+    background-color: $color;
+    border: none;
+    padding: 15px 20px;
+    margin: 15px 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($color, 10%);
     }
   }
+}

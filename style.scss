@@ -1,7 +1,63 @@
-@import url(/partials/_reset.scss);
-@import url(/partials/_colors.scss);
-@import url(/partials/_fonts.scss);
-@import url(/partials/_spacings.scss);
-@import url(/partials/_buttons.scss);
-@import url(/partials/_mixins.scss);
-@import url(/partials/_animations.scss);
+@import "partials/reset", "partials/colors", "partials/fonts",
+  "partials/spacings", "partials/buttons", "partials/mixins",
+  "partials/animations";
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $bg-hero;
+  padding: 15px;
+  li {
+    list-style: none;
+  }
+  a {
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+
+.headline {
+  text-align: center;
+  padding: 3rem;
+  
+  h2{
+    font-size: 34px;
+    font-weight: bold;
+  }
+  p{
+    font-style: italic;
+  }
+  button {
+    font-weight: 800;
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  background-color: $bg-hero; 
+  .text-container {
+    padding: 25px;
+    font-size: 24px;
+    font-weight: 500;
+    @include fade-in-down; 
+  }
+  .image-container img {
+    @include floating; 
+  }
+}
+
+.grid-container {
+    justify-content: center;
+    margin: 30px 0px;
+  @include grid(
+    4
+  ); 
+  .image-container {
+    @include floating(
+      $shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+      $border: none
+    ); 
+  }
+}

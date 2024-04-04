@@ -1,4 +1,4 @@
-@mixin fade-in-down($duration: 0.5s, $start: -10px, $end: 0, $delay: 0s, $name: unique-fade-in) {
+@mixin fade-in-down($duration: 2.5s, $start: -30px, $end: 0px, $delay: 0.5s, $name: unique-fade-in) {
     @keyframes #{$name} {
       from {
         opacity: 0;
