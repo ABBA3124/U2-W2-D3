@@ -1,0 +1,6 @@
+@each $color in $button-colors {
+    .button-#{nth($color, 1)} {
+      background-color: $color;
+      @include floating;
+    }
+  }

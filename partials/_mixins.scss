@@ -1,0 +1,14 @@
+@mixin floating($radius: 4px, $shadow: 0 4px 6px rgba(0,0,0,0.1), $border: 1px solid transparent) {
+    border-radius: $radius;
+    box-shadow: $shadow;
+    border: $border;
+  }
+  
+  @mixin grid($elements-per-line: 4) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    & > * {
+      flex: 0 1 calc(100% / #{$elements-per-line} - 20px);
+    }
+  }

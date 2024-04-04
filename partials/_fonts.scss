@@ -1,0 +1,7 @@
+$font-family: 'Arial', sans-serif;
+$font-sizes: (small: 0.8rem, normal: 1rem, large: 1.2rem, xlarge: 1.5rem);
+
+@mixin title-big {
+  font-size: 2.5rem;
+  font-weight: bold;
+}

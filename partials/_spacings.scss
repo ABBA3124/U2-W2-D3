@@ -1,0 +1,8 @@
+$spacings: (sm: 8px, normal: 16px, md: 24px, lg: 32px, xl: 40px, xxl: 48px);
+
+@each $size, $value in $spacings {
+  .padding-block-#{$size} { padding-block: $value; }
+  .padding-inline-#{$size} { padding-inline: $value; }
+  .margin-block-#{$size} { margin-block: $value; }
+  .margin-inline-#{$size} { margin-inline: $value; }
+}
