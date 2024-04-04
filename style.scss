@@ -22,8 +22,7 @@ nav ul {
   padding: 3rem;
   
   h2{
-    font-size: 34px;
-    font-weight: bold;
+    @include title-big;
   }
   p{
     font-style: italic;
